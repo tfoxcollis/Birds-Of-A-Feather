@@ -7,6 +7,7 @@ export const eventsData = [
       lng: "",
       zip: 89179
     },
+    date: "2022/09/01",
     description: "Taking the family to Exploration Peak Park",
     event: "picnic"
   },
@@ -18,6 +19,7 @@ export const eventsData = [
       lng: "",
       zip: 89179
     },
+    date: "2022/09/21",
     description: "Taking the family the movies",
     event: "movies"
   },
@@ -29,6 +31,7 @@ export const eventsData = [
       lng: "",
       zip: 89179
     },
+    date: "2022/08/11",
     description: "Taking the family to the splash pad.",
     event: "water play"
   },
@@ -40,6 +43,7 @@ export const eventsData = [
       lng: "",
       zip: 89179
     },
+    date: "2022/08/16",
     description: "Hiking exploration peak with my significant other.",
     event: "hiking"
   }
