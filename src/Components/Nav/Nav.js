@@ -7,8 +7,8 @@ const Nav = () => {
   return (
     <nav className="nav-bar">
       <span className="nav-links">
-        <NavLink className="home-nav" to='/home' aria-label="Home">HOME</NavLink>
-        <NavLink className="rsvp-nav" to='/rsvp' aria-label="Rsvp">RSVP</NavLink>
+        <NavLink className="nav" to='/home' aria-label="Home">HOME</NavLink>
+        <NavLink className="nav" to='/rsvp' aria-label="Rsvp">RSVP</NavLink>
       </span>
 		</nav>
   )
