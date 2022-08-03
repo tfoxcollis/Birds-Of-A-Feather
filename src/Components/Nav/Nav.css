@@ -1,0 +1,53 @@
+.nav-bar {
+	background-color: rgb(213, 25, 213);
+	margin-bottom: 10px;
+	display: flex;
+	align-items: center;
+	border-bottom: 2px solid black;
+	width: 100%;
+  height: 40px;
+}
+
+.home-nav {
+	text-decoration: none;
+	color: black;
+  font-size: 25px;
+	font-family: 'Bubblegum Sans', cursive;
+  margin-left: 10px;
+  margin-right: 15px;
+}
+
+.rsvp-nav {
+	text-decoration: none;
+  font-size: 25px;
+	color: black;
+	font-family: 'Bubblegum Sans', cursive;
+}
+
+.Rsvp-nav,
+.home-nav:hover {
+	text-decoration: underline;
+  color: black;
+  background: linear-gradient(90deg, red, orange, yellow, green, blue, purple);
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
+.active {
+	background: linear-gradient(90deg, red, orange, yellow, green, blue, purple);
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
+a {
+  color: black;
+  background: linear-gradient(90deg, red, orange, yellow, green, blue, purple);
+  background-clip: text;
+  -webkit-background-clip: text;
+  margin: auto;
+}
+
+a:hover {
+  color: transparent;
+  transition: 500ms ease;
+}

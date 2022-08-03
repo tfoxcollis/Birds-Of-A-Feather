@@ -1,5 +1,6 @@
 import './App.css';
 import Welcome from "../Welcome/Welcome"
+import Nav from "../Nav/Nav"
 // import PropTypes from 'prop-types';
 
 import React from 'react'
@@ -13,7 +14,7 @@ const App = () => {
           <Welcome />
         </Route>
         <Route exact path="/home" >
-
+          <Nav />
         </Route>
 
       </main>
