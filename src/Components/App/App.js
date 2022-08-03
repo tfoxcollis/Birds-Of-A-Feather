@@ -7,9 +7,20 @@ import { Route } from 'react-router';
 
 const App = () => {
   return (
-    <Route>
-      <Welcome />
-    </Route>
+    <div className="main">
+      <main className="main-container">
+        <Route exact path="/">
+          <Welcome />
+        </Route>
+        <Route exact path="/home" >
+
+        </Route>
+
+      </main>
+      <footer className="footer">
+        
+      </footer>
+    </div>
   )
 }
 
