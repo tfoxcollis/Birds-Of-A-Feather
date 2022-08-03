@@ -2,23 +2,24 @@ import "./Events.css"
 import EventCard from "../EventCard/EventCard"
 import React from 'react'
 
-const Events = ({eventCards}) => {
+const Events = ({filteredEvents}) => {
+  const renderedEvents = filteredEvents.map((event) => {
+    return(
+      <EventCard
+        id={event.id}
+        key={event.id}
+        userId={event.userId}
+        location={event.location}
+        description={event.description}
+        event={event.event}
+        date={event.date}
+      />
+    )
+  })
 
   return (
     <div className="events-container">
-      {eventCards.map((event) => {
-        return(
-          <EventCard
-            id={event.id}
-            key={event.id}
-            userId={event.userId}
-            location={event.location}
-            description={event.description}
-            event={event.event}
-            date={event.date}
-          />
-        )
-      })}
+      {renderedEvents.length ? renderedEvents : <p>Uh Oh! There are no events happening in this area.</p>}
     </div>
   )
 }

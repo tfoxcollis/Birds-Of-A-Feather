@@ -12,6 +12,7 @@ import { Route } from 'react-router';
 
 const App = () => {
   const [eventCards, setEventCards] = useState(eventsData)
+  const [filteredEvents, setFilteredEvents] = useState([])
 
   return (
     <div className="main">
@@ -30,8 +31,8 @@ const App = () => {
         </Route>
 
         <Route exact path="/home" >
-          <Menu />
-          <Events eventCards={eventCards}/>
+          <Menu eventCards={eventCards} setFilteredEvents={setFilteredEvents}/>
+          <Events filteredEvents={filteredEvents}/>
         </Route>
         
         <Route exact path="/Rsvp">
