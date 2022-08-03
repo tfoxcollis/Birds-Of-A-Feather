@@ -1,4 +1,4 @@
-import 'src/Components/App/App.css';
+import './App.css';
 import Welcome from "../Welcome/Welcome"
 // import PropTypes from 'prop-types';
 

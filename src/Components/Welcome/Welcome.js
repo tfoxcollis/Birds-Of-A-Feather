@@ -1,4 +1,4 @@
-import "src/Components/Welcome/Welcome.css"
+import "./Welcome.css"
 import React from 'react'
 
 const Welcome = () => {
