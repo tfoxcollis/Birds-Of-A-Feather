@@ -7,6 +7,10 @@ export const eventsData = [
       lng: "",
       zip: 89179
     },
+    numberOfAdults: 2,
+    numberOfKids: 1,
+    kidsAges: [1],
+    
     date: "2022/09/01",
     description: "Taking the family to Exploration Peak Park",
     event: "picnic"
@@ -64,3 +68,13 @@ export const usersData = [
   }
 ]
 
+export const rsvpData = [
+  {
+    userId: 2,
+    eventId: 1
+  },
+  {
+    userId: 3,
+    eventId: 3
+  }
+]
