@@ -1,6 +1,7 @@
 import './App.css';
 import Welcome from "../Welcome/Welcome"
 import Nav from "../Nav/Nav"
+import Rsvp from "../Rsvp/Rsvp"
 // import PropTypes from 'prop-types';
 
 import React from 'react'
@@ -15,6 +16,10 @@ const App = () => {
         </Route>
         <Route exact path="/home" >
           <Nav />
+        </Route>
+        <Route exact path="/Rsvp">
+          <Nav />
+          <Rsvp />
         </Route>
 
       </main>

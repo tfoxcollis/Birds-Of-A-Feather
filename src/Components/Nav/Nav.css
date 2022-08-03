@@ -24,9 +24,7 @@
 	font-family: 'Bubblegum Sans', cursive;
 }
 
-.Rsvp-nav,
-.home-nav:hover {
-	text-decoration: underline;
+.nav-links:hover {
   color: black;
   background: linear-gradient(90deg, red, orange, yellow, green, blue, purple);
   background-clip: text;
