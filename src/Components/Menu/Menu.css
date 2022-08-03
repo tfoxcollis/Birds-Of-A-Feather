@@ -1,0 +1,10 @@
+.menu-main{
+  display: flex;
+  flex-direction: column;
+  border: 2px solid black;
+  width: 20%;
+}
+
+h3, h2 {
+  margin: 0;
+}
