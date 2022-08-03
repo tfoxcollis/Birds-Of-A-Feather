@@ -4,10 +4,12 @@ import Nav from "../Nav/Nav"
 import Rsvp from "../Rsvp/Rsvp"
 // import PropTypes from 'prop-types';
 
-import React from 'react'
+import React, { useState } from 'react'
 import { Route } from 'react-router';
 
 const App = () => {
+  const [eventCards, setEventCards] = useState()
+  
   return (
     <div className="main">
       <main className="main-container">
