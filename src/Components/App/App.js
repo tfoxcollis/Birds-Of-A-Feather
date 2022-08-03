@@ -4,6 +4,7 @@ import Nav from "../Nav/Nav"
 import Rsvp from "../Rsvp/Rsvp"
 import { eventsData, usersData} from "../../data/mockData"
 import Events from "../Events/Events"
+import Menu from "../Menu/Menu"
 // import PropTypes from 'prop-types';
 
 import React, { useState } from 'react'
@@ -14,18 +15,26 @@ const App = () => {
 
   return (
     <div className="main">
-      <main className="main-container">
+      <header>
+        <Route exact path="/home" >
+          <Nav />
+        </Route>
+        
+        <Route exact path="/Rsvp">
+          <Nav />
+        </Route>
+      </header>
+      <main role="main" className="main-container">
         <Route exact path="/">
           <Welcome />
         </Route>
 
         <Route exact path="/home" >
-          <Nav />
+          <Menu />
           <Events eventCards={eventCards}/>
         </Route>
         
         <Route exact path="/Rsvp">
-          <Nav />
           <Rsvp />
         </Route>
 
