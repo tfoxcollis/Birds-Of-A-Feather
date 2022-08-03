@@ -1,7 +1,7 @@
 import "./Welcome.css"
 import React from 'react'
 import { Link } from "react-router-dom";
-import comingSoon from "/Users/trish/turing/frontend/mod3/birds-of-a-feather/src/assets/imageComingSoon.jpg"
+import comingSoon from "../../assets/imageComingSoon.jpg"
 
 const Welcome = () => {
   return (
