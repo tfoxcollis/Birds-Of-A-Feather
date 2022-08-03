@@ -21,7 +21,7 @@ export const eventsData = [
     location: {
       lat: "",
       lng: "",
-      zip: 89179
+      zip: 89129
     },
     date: "2022/09/21",
     description: "Taking the family the movies",
@@ -45,7 +45,7 @@ export const eventsData = [
     location: {
       lat: "",
       lng: "",
-      zip: 89179
+      zip: 89101
     },
     date: "2022/08/16",
     description: "Hiking exploration peak with my significant other.",
@@ -78,3 +78,47 @@ export const rsvpData = [
     eventId: 3
   }
 ]
+
+export const zoneKeys = [
+  ["northWest", "North West"], ["northEast", "North East"], ["southWest", "South West"], ["southEast", "South East"]
+]
+
+export const zones = {
+  northWest: [
+    89129,
+    89134,
+    89128,
+    89145,
+    89117,
+    89129
+  ],
+  northEast: [
+    89101,
+    89106,
+    89032,
+    89031,
+    89115,
+    89156,
+    89110,
+    89081,
+  ],
+  southEast: [
+    89123,
+    89183,
+    89052,
+    89074,
+    89012,
+    89119,
+    89120,
+  ],
+  southWest: [
+    89179,
+    89141,
+    89178,
+    89139,
+    89148,
+    89113,
+    89147,
+  ]
+
+}
