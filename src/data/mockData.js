@@ -3,8 +3,8 @@ export const eventsData = [
     id: 1,
     userId: 1,
     location: {
-      lat: 36.019505,
-      lng: -115.261291,
+      lat: 36.014001,
+      lng: -115.260637,
       zip: 89179
     },
     numberOfAdults: 2,
