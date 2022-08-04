@@ -28,12 +28,12 @@ const Menu = ({ eventCards, setFilteredEvents }) => {
     }
 
     return (
-      <>
+      <span className="menu-container">
         <button type="button" className="collapsible" onClick={(e) => toggleCollapsible(e)}>{zoneKey[1]}</button>
         <div className="content">
           {keyZips}
         </div>
-      </>
+      </span>
     )
   })
   return (
