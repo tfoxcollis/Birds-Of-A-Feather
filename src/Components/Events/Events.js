@@ -2,7 +2,7 @@ import "./Events.css"
 import EventCard from "../EventCard/EventCard"
 import React from 'react'
 
-const Events = ({filteredEvents}) => {
+const Events = ({filteredEvents, toggleModal}) => {
   const renderedEvents = filteredEvents.map((event) => {
     return(
       <EventCard
@@ -13,6 +13,7 @@ const Events = ({filteredEvents}) => {
         description={event.description}
         event={event.event}
         date={event.date}
+        toggleModal={toggleModal}
       />
     )
   })
