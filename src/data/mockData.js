@@ -3,8 +3,8 @@ export const eventsData = [
     id: 1,
     userId: 1,
     location: {
-      lat: "",
-      lng: "",
+      lat: 36.019505,
+      lng: -115.261291,
       zip: 89179
     },
     numberOfAdults: 2,
@@ -19,8 +19,8 @@ export const eventsData = [
     id: 2,
     userId: 1,
     location: {
-      lat: "",
-      lng: "",
+      lat: 36.019505,
+      lng: -115.261291,
       zip: 89129
     },
     date: "2022/09/21",
@@ -31,8 +31,8 @@ export const eventsData = [
     id: 3,
     userId: 1,
     location: {
-      lat: "",
-      lng: "",
+      lat: 36.019505,
+      lng: -115.261291,
       zip: 89179
     },
     date: "2022/08/11",
@@ -43,8 +43,8 @@ export const eventsData = [
     id: 4,
     userId: 2,
     location: {
-      lat: "",
-      lng: "",
+      lat: 36.019505,
+      lng: -115.261291,
       zip: 89101
     },
     date: "2022/08/16",

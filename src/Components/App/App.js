@@ -15,7 +15,7 @@ const App = () => {
   const [eventCards, setEventCards] = useState(eventsData)
   const [filteredEvents, setFilteredEvents] = useState([])
   const [showModal, setShowModal] = useState(false)
-  const [modalEvent, setModalEvent] = useState({})
+  const [modalEvent, setModalEvent] = useState()
 
   const toggleModal = (e, id) => {
     const event = filteredEvents.find(event => event.id === id)
