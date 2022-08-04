@@ -6,6 +6,11 @@
   width: 15%;
 }
 
+.menu-container {
+  width: 100%;
+  background-color: #8a19ff;
+}
+
 h3, h2, p {
   margin: 0;
 }
@@ -14,7 +19,7 @@ h2 {
   margin-bottom: 5px;
 }
 
-button:hover {
+.zip-button:hover {
   color: transparent;
   background: linear-gradient(90deg, red, orange, yellow, green, blue, purple);
   background-clip: text;
@@ -23,17 +28,21 @@ button:hover {
 }
 
 .collapsible {
-  background-color: #777;
+  background-color: #8a19ff;
   cursor: pointer;
   padding: 18px;
   width: 100%;
   text-align: left;
   outline: none;
-  font-size: 15px;
+  font-size: 20px;
+  font-weight: bold;
 }
 
 .active, .collapsible:hover {
-  background-color: #555;
+  background: linear-gradient(90deg, red, orange, yellow, green, blue, purple);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
 }
 
 .content {
