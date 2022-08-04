@@ -1,3 +1,12 @@
+html, body {
+  height: 100vh;
+  overflow-x: hidden;
+  font-family: 'Bubblegum Sans', cursive;
+}
+#root {
+  height: 100%;
+}
+
 .App {
   text-align: center;
 }
@@ -40,4 +49,16 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.main {
+  height: 100%;
+  background-image: url("../../assets/neon-flamingos.jpeg");
+}
+
+.main-container {
+  height: 100%;
+  margin: 0;
+  background-image: linear-gradient(to right,
+	rgba(199.5, 220.5, 220.5, .20) 150px, rgba(199.5, 220.5, 220.5, .20) 100%);
 }
