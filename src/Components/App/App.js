@@ -5,6 +5,7 @@ import Rsvp from "../Rsvp/Rsvp"
 import { eventsData, usersData} from "../../data/mockData"
 import Events from "../Events/Events"
 import Menu from "../Menu/Menu"
+import Modal from '../Modal/Modal';
 // import PropTypes from 'prop-types';
 
 import React, { useState } from 'react'
@@ -13,6 +14,12 @@ import { Route } from 'react-router';
 const App = () => {
   const [eventCards, setEventCards] = useState(eventsData)
   const [filteredEvents, setFilteredEvents] = useState([])
+  const [showModal, setShowModal] = useState(false)
+
+  const toggleModal = (e) => {
+    e.preventDefault()
+    setShowModal(!showModal)
+  }
 
   return (
     <div className="main">
@@ -33,6 +40,9 @@ const App = () => {
         <Route exact path="/home" >
           <Menu eventCards={eventCards} setFilteredEvents={setFilteredEvents}/>
           <Events filteredEvents={filteredEvents}/>
+          <button  onClick={e => toggleModal(e)}
+          > show Modal </button>
+          <Modal showModal={showModal} message={"hello modal"} toggleModal={toggleModal}/>
         </Route>
         
         <Route exact path="/Rsvp">
