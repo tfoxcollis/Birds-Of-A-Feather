@@ -15,10 +15,16 @@ const App = () => {
   const [eventCards, setEventCards] = useState(eventsData)
   const [filteredEvents, setFilteredEvents] = useState([])
   const [showModal, setShowModal] = useState(false)
+  const [modalEvent, setModalEvent] = useState({})
 
-  const toggleModal = (e) => {
-    e.preventDefault()
+  const toggleModal = (e, id) => {
+    const event = filteredEvents.find(event => event.id === id)
+    setModalEvent(event)
     setShowModal(!showModal)
+    const modal = document.getElementById("modal")
+    const modalContainer = document.getElementById("modal-container")
+    modalContainer.classList.toggle("off")
+    modal.classList.toggle("off")
   }
 
   return (
@@ -39,10 +45,8 @@ const App = () => {
 
         <Route exact path="/home" >
           <Menu eventCards={eventCards} setFilteredEvents={setFilteredEvents}/>
-          <Events filteredEvents={filteredEvents}/>
-          <button  onClick={e => toggleModal(e)}
-          > show Modal </button>
-          <Modal showModal={showModal} message={"hello modal"} toggleModal={toggleModal}/>
+          <Events filteredEvents={filteredEvents} toggleModal={toggleModal}/>
+          <Modal showModal={showModal} modalEvent={modalEvent} toggleModal={toggleModal}/>
         </Route>
         
         <Route exact path="/Rsvp">
