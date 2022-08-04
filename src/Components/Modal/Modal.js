@@ -27,7 +27,7 @@ const Modal = ({showModal, modalEvent, toggleModal}) => {
       <div className="modal off" id="modal">
         {!!modalEvent ? 
           <>
-            <h2>Modal Window</h2>
+            <h2>{modalEvent.event}</h2>
             <div className="modal-content">{modalEvent.description}</div>
             <div id="map" className="mapquest-map"></div>
             <div className="actions">
