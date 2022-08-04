@@ -9,7 +9,7 @@ const Modal = ({showModal, modalEvent, toggleModal}) => {
       window.L.mapquest.map('map', {
         center: [modalEvent.location.lat, modalEvent.location.lng],
         layers: window.L.mapquest.tileLayer('map'),
-        zoom: 50
+        zoom: 14
       });
     }
   })
