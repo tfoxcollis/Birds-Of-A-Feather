@@ -6,11 +6,19 @@ const Modal = ({showModal, modalEvent, toggleModal}) => {
   useEffect(() => {
     if(!!modalEvent) {
       window.L.mapquest.key = process.env.REACT_APP_MAPQUEST_KEY;
-      window.L.mapquest.map('map', {
+      var map = window.L.mapquest.map('map', {
         center: [modalEvent.location.lat, modalEvent.location.lng],
         layers: window.L.mapquest.tileLayer('map'),
         zoom: 14
       });
+
+      window.L.marker([modalEvent.location.lat, modalEvent.location.lng], {
+        icon: window.L.mapquest.icons.marker(),
+        draggable: false
+      }).bindPopup("Las Vegas, NV").addTo(map);
+
+      window.L.circle([modalEvent.location.lat, modalEvent.location.lng], { radius: 1000 }).addTo(map);
+
     }
   })
 
