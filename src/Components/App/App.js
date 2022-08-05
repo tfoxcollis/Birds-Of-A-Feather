@@ -6,6 +6,7 @@ import { eventsData, usersData, rsvpData} from "../../data/mockData"
 import Events from "../Events/Events"
 import Menu from "../Menu/Menu"
 import Modal from '../Modal/Modal';
+import EventForm from '../EventForm/EventForm';
 // import PropTypes from 'prop-types';
 
 import React, { useState } from 'react'
@@ -38,6 +39,10 @@ const App = () => {
         <Route exact path="/Rsvp">
           <Nav />
         </Route>
+
+        <Route exact path="/eventform">
+          <Nav />
+        </Route>
       </header>
       <main role="main" className="main-container">
         <Route exact path="/">
@@ -53,7 +58,10 @@ const App = () => {
         <Route exact path="/Rsvp">
           <Rsvp rsvp={rsvp} eventCards={eventCards} toggleModal={toggleModal}/>
           <Modal showModal={showModal} modalEvent={modalEvent} toggleModal={toggleModal} setRsvp={setRsvp} rsvp={rsvp}/>
+        </Route>
 
+        <Route exact path="/eventform">
+          <EventForm />
         </Route>
 
       </main>
