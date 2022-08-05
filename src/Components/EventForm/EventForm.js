@@ -67,6 +67,15 @@ const EventForm = () => {
           <input type="submit" value="search"/>
         </form>
         {pointsOfInt.length ? renderedPointsOfInt() : "Search for a location"}
+        <form className="event-form-details">
+          <label>Date:
+            <input type="date" className="date"/>
+            <input type="time" className="time"/>
+          </label>
+          <label>Description:
+            <textarea type="text" className="description" placeholder="Who's going and what are you up to?" />
+          </label>
+        </form>
       </div>
       <div className="map-container">
         <div id="map" className="mapquest-map"></div>
