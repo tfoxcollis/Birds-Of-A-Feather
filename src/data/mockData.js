@@ -1,7 +1,7 @@
 export const eventsData = [
   {
     id: 1,
-    userId: 1,
+    userId: 2,
     location: {
       lat: 36.014001,
       lng: -115.260637,
@@ -31,7 +31,7 @@ export const eventsData = [
   },
   {
     id: 3,
-    userId: 1,
+    userId: 3,
     location: {
       lat: 36.106961,
       lng: -115.252263,
@@ -96,7 +96,7 @@ export const eventsData = [
   },
   {
     id: 8,
-    userId: 1,
+    userId: 2,
     location: {
       lat: 36.072217,
       lng: -115.107536, 
@@ -135,7 +135,7 @@ export const eventsData = [
   },
   {
     id: 11,
-    userId: 1,
+    userId: 3,
     location: {
       lat: 36.25416, 
       lng: -115.192432,
@@ -161,7 +161,7 @@ export const eventsData = [
   },
   {
     id: 13,
-    userId: 1,
+    userId: 5,
     location: {
       lat: 35.974603,
       lng: -115.120583,
@@ -239,7 +239,7 @@ export const eventsData = [
   },
   {
     id: 19,
-    userId: 1,
+    userId: 3,
     location: {
       lat: 36.012266,
       lng:  -115.16346,
@@ -308,11 +308,11 @@ export const usersData = [
 
 export const rsvpData = [
   {
-    userId: 2,
+    userId: 1,
     eventId: 1
   },
   {
-    userId: 3,
+    userId: 1,
     eventId: 3
   }
 ]

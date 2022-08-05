@@ -1,10 +1,27 @@
-import React from 'react'
+import React, { useState } from 'react'
+import Events from '../Events/Events'
 import "./Rsvp.css"
 
 
-const Rsvp = () => {
+
+const Rsvp = ({rsvp, eventCards, toggleModal}) => {
+
+ 
+  const filterEvents = eventCards.filter((event) => {
+    const rsvpobj = rsvp.find(rsvp => rsvp.eventId === event.id) 
+    if(rsvpobj){
+      return true
+    }else{
+     return false
+    }
+  }) 
+  
   return (
-    <h2>Your RSVP Page</h2>
+    <div>
+      <h2>Your RSVP Page</h2>
+      <Events filteredEvents={filterEvents} toggleModal={toggleModal} />
+
+    </div>
   )
 }
 
