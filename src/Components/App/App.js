@@ -61,7 +61,7 @@ const App = () => {
         </Route>
 
         <Route exact path="/eventform">
-          <EventForm />
+          <EventForm eventCards={eventCards} setEventCards={setEventCards}/>
         </Route>
 
       </main>

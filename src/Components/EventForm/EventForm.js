@@ -2,8 +2,8 @@ import React, { useState, useEffect } from 'react'
 import "./EventForm.css"
 
 
-const EventForm = () => {
-  const [pointsOfInt, setPointsOfInt] = useState([])
+const EventForm = ({eventCards,setEventCards}) => {
+  const [pointsOfInt, setPointsOfInt,] = useState([])
   const [selectedPoint, setSelectedPoint] = useState()
 
   useEffect(() => {
@@ -59,6 +59,25 @@ const EventForm = () => {
     )
   }
 
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    const newEvent = {
+      id: Date.now(),
+      userId: 1,
+      location: {
+        lat: selectedPoint.place.geometry.coordinates[1],
+        lng: selectedPoint.place.geometry.coordinates[0],
+        zip: selectedPoint.place.properties.postalCode
+      },
+      
+      date: e.target.date.value,
+      time: e.target.time.value,
+      event: e.target.event.value,
+      description: e.target.description.value
+    }
+    setEventCards([...eventCards, newEvent])
+  }
+
   return (
     <div className="main-event-container">
       <div className="form-container">
@@ -67,19 +86,31 @@ const EventForm = () => {
           <input type="submit" value="search"/>
         </form>
         {pointsOfInt.length ? renderedPointsOfInt() : "Search for a location"}
-        <form className="event-form-details">
+        <form className="event-form-details" onSubmit={(e) => handleSubmit(e)}>
+
           <label>Date:
-            <input type="date" className="date"/>
-            <input type="time" className="time"/>
+            <input type="date" className="date" id="date"/>
           </label>
+
+          <label>Time:
+            <input type="time" className="time" id="time"/>
+          </label>
+
+          <label>Event:
+            <input type="event" className="event" id="event" placeholder="ex: Hiking"/>
+          </label>
+
           <label>Description:
-            <textarea type="text" className="description" placeholder="Who's going and what are you up to?" />
+            <textarea type="text" className="description" id="description" placeholder="Who's going and what are you up to?" />
           </label>
+
+          <input type="submit" value="Create Event!"/>
         </form>
       </div>
       <div className="map-container">
         <div id="map" className="mapquest-map"></div>
       </div>
+
     </div>
   )
 }
