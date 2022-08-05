@@ -13,6 +13,7 @@ const Events = ({filteredEvents, toggleModal}) => {
         description={event.description}
         event={event.event}
         date={event.date}
+        time={event.time}
         toggleModal={toggleModal}
       />
     )
