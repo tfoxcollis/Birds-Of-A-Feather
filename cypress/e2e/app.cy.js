@@ -28,6 +28,22 @@ describe("app", () => {
       .get(".event-card").contains("p", "Taking our 3yo to the park")
       .get(".toggle-button").click()
       .get(".modal").contains("h2", "Picnic in the park")
+      .get(".close-modal").click({force: true})
+      .get(".modal").should("not.be.visible")
+  })
+
+  it("should be able to click RSVP link in nav bar and be taken to RSVP page", () => {
+    cy.get(".nav-links").contains("RSVP").click()
+    .url().should("eq", "http://localhost:3000/rsvp")
+      .get(".nav-links").contains("Home").click()
+      .url().should("eq", "http://localhost:3000/home")
+  })
+
+  it("should be able to click Create Event link in nav bar and be taken to Create Event Form page", () => {
+    cy.get(".nav-links").contains("Create Event").click()
+    .url().should("eq", "http://localhost:3000/eventform")
+      .get(".nav-links").contains("Home").click()
+      .url().should("eq", "http://localhost:3000/home")
   })
 
 })
