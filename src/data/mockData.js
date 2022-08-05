@@ -7,10 +7,6 @@ export const eventsData = [
       lng: -115.260637,
       zip: 89179
     },
-    numberOfAdults: 2,
-    numberOfKids: 1,
-    kidsAges: [1],
-    
     date: "2022/09/01",
     time: "3:00pm",
     description: "Taking the family to Exploration Peak Park",
