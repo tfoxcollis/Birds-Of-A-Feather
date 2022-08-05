@@ -1,11 +1,16 @@
 import React, { useEffect } from 'react'
 import "./Modal.css.scss"
 
-const Modal = ({showModal, modalEvent, toggleModal}) => {
+
+const Modal = ({showModal, modalEvent, toggleModal, setRsvp, rsvp}) => {
 
   useEffect(() => {
     if(!!modalEvent) {
       window.L.mapquest.key = process.env.REACT_APP_MAPQUEST_KEY;
+      const container = window.L.DomUtil.get("map")
+      if(container != null) {
+        container._leaflet_id = null;
+      }
       var map = window.L.mapquest.map('map', {
         center: [modalEvent.location.lat, modalEvent.location.lng],
         layers: window.L.mapquest.tileLayer('map'),
@@ -22,6 +27,15 @@ const Modal = ({showModal, modalEvent, toggleModal}) => {
     }
   })
 
+  const addRsvp = (e) => {
+    e.preventDefault(e)
+    const newRsvp = {
+      userId: 1,
+      eventId: modalEvent.id
+    }
+    setRsvp([...rsvp, newRsvp])
+  }
+
   return (
     <div className="modal-container off" id="modal-container">
       <div className="modal off" id="modal">
@@ -32,6 +46,7 @@ const Modal = ({showModal, modalEvent, toggleModal}) => {
             <div id="map" className="mapquest-map"></div>
             <div className="actions">
               <button onClick={(e) => toggleModal(e)}>Close</button>
+              <button onClick={(e) => addRsvp(e)}>RSVP</button>
             </div>
           </> :
           null
