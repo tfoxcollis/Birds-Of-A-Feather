@@ -45,8 +45,8 @@ const Modal = ({showModal, modalEvent, toggleModal, setRsvp, rsvp}) => {
             <div className="modal-content">{modalEvent.description}</div>
             <div id="map" className="mapquest-map"></div>
             <div className="actions">
-              <button onClick={(e) => toggleModal(e)}>Close</button>
-              <button onClick={(e) => addRsvp(e)}>RSVP</button>
+              <button className="close-modal" onClick={(e) => toggleModal(e)}>Close</button>
+              <button className="rsvp-button" onClick={(e) => addRsvp(e)}>RSVP</button>
             </div>
           </> :
           null
