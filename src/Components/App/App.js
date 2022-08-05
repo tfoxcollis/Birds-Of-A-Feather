@@ -29,6 +29,14 @@ const App = () => {
     modal.classList.toggle("off")
   }
 
+  const messageByType = (type) => {
+    if(type === "home"){
+      return "Uh Oh! There are no events happening in this area. Please try another zip code!"
+    }else if(type === "Rsvp"){ 
+      return "You have not RSVP'd to any events! Go check some out!"
+    }
+  }
+
   return (
     <div className="main">
       <header>
@@ -51,12 +59,12 @@ const App = () => {
 
         <Route exact path="/home" >
           <Menu eventCards={eventCards} setFilteredEvents={setFilteredEvents}/>
-          <Events filteredEvents={filteredEvents} toggleModal={toggleModal}/>
+          <Events type="home" messageByType={messageByType} filteredEvents={filteredEvents} toggleModal={toggleModal}/>
           <Modal showModal={showModal} modalEvent={modalEvent} toggleModal={toggleModal} setRsvp={setRsvp} rsvp={rsvp}/>
         </Route>
         
         <Route exact path="/Rsvp">
-          <Rsvp rsvp={rsvp} eventCards={eventCards} toggleModal={toggleModal}/>
+          <Rsvp messageByType={messageByType} rsvp={rsvp} eventCards={eventCards} toggleModal={toggleModal}/>
           <Modal showModal={showModal} modalEvent={modalEvent} toggleModal={toggleModal} setRsvp={setRsvp} rsvp={rsvp}/>
         </Route>
 

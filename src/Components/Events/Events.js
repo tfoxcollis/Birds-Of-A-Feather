@@ -2,7 +2,7 @@ import "./Events.css"
 import EventCard from "../EventCard/EventCard"
 import React from 'react'
 
-const Events = ({filteredEvents, toggleModal}) => {
+const Events = ({type, filteredEvents, toggleModal, messageByType}) => {
   const renderedEvents = filteredEvents.map((event) => {
     return(
       <EventCard
@@ -21,7 +21,7 @@ const Events = ({filteredEvents, toggleModal}) => {
 
   return (
     <div className="events-container">
-      {renderedEvents.length ? renderedEvents : <p>Uh Oh! There are no events happening in this area.</p>}
+      {renderedEvents.length ? renderedEvents : <p>{messageByType(type)}</p>}
     </div>
   )
 }

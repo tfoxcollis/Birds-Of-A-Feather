@@ -4,7 +4,7 @@ import "./Rsvp.css"
 
 
 
-const Rsvp = ({rsvp, eventCards, toggleModal}) => {
+const Rsvp = ({messageByType, rsvp, eventCards, toggleModal}) => {
 
  
   const filterEvents = eventCards.filter((event) => {
@@ -19,7 +19,7 @@ const Rsvp = ({rsvp, eventCards, toggleModal}) => {
   return (
     <div>
       <h2>Your RSVP Page</h2>
-      <Events filteredEvents={filterEvents} toggleModal={toggleModal} />
+      <Events type="Rsvp" messageByType={messageByType} filteredEvents={filterEvents} toggleModal={toggleModal} />
 
     </div>
   )
