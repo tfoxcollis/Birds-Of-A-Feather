@@ -38,7 +38,9 @@ const Menu = ({ eventCards, setFilteredEvents }) => {
   })
   return (
     <div className="menu-main">
-      <h2>Pick your zip</h2><br></br>
+      <div className="pick-zip">
+        <h2>Pick your zip</h2><br></br>
+      </div>
       {renderedZones}
     </div>
   )

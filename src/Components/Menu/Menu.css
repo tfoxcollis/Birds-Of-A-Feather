@@ -1,8 +1,10 @@
 .menu-main{
+  padding-top: 35px;
+
   display: flex;
   flex-direction: column;
   align-items: center;
-  border: 2px solid black;
+  /* border: 2px solid black; */
   width: 15%;
 }
 
@@ -17,6 +19,16 @@ h2, p {
 
 h2 {
   margin-bottom: 5px;
+}
+
+.pick-zip{
+  width: 100%;
+  display: flex;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  justify-content: center;
+  background-color:rgb(210, 146, 239);
+  opacity: .90;
 }
 
 .zip-button:hover {

@@ -1,5 +1,7 @@
 .nav-bar {
 	background-color: rgb(213, 25, 213);
+  background-color:rgb(210, 146, 239);
+
 	padding: 10px;
 	display: flex;
 	align-items: center;
