@@ -50,9 +50,9 @@ const EventForm = ({eventCards,setEventCards}) => {
     return(
       pointsOfInt.map((point) => {
         return(
-          <div>
-            <h2>{point.name}</h2>
+          <div className="poi">
             <button id={point.mqId} onClick={(e) => handleClick(e)}>Select this</button>
+            <h3>{point.name}</h3>
           </div>
         )
       })
@@ -81,29 +81,48 @@ const EventForm = ({eventCards,setEventCards}) => {
   return (
     <div className="main-event-container">
       <div className="form-container">
-        <form onSubmit={(e) => fetchPoi(e)}>
-          <input type="search" id="place-search-input" placeholder="Start Searching..."/>
-          <input type="submit" value="search"/>
-        </form>
-        {pointsOfInt.length ? renderedPointsOfInt() : "Search for a location"}
+        <div>
+          <form onSubmit={(e) => fetchPoi(e)}>
+            <input type="search" id="place-search-input" placeholder="Start Searching..."/>
+            <input type="submit" value="search"/>
+          </form>
+          {pointsOfInt.length ? renderedPointsOfInt() : "Search for a location"}
+        </div>
         <form className="event-form-details" onSubmit={(e) => handleSubmit(e)}>
-
-          <label>Date:
-            <input type="date" className="date" id="date"/>
-          </label>
-
-          <label>Time:
-            <input type="time" className="time" id="time"/>
-          </label>
-
-          <label>Event:
-            <input type="event" className="event" id="event" placeholder="ex: Hiking"/>
-          </label>
-
-          <label>Description:
-            <textarea type="text" className="description" id="description" placeholder="Who's going and what are you up to?" />
-          </label>
-
+          <table>
+            <tr>
+              <td>
+                <label for="date">Date:</label>
+              </td>
+              <td>
+                <input type="date" className="date" id="date"/>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label for="time">Time:</label>
+              </td>
+              <td>
+                <input type="time" className="time" id="time"/>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label for="event">Event:</label>
+              </td>
+              <td>
+                <input type="event" className="event" id="event" placeholder="ex: Hiking"/>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label for="description">Description:</label>
+              </td>
+              <td>
+                <textarea type="text" className="description" id="description" placeholder="Who's going and what are you up to?" />
+              </td>
+            </tr>
+          </table>
           <input type="submit" value="Create Event!"/>
         </form>
       </div>

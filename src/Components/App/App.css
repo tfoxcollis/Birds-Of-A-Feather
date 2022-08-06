@@ -7,12 +7,21 @@ html, body {
   height: 100%;
 }
 
+header {
+  height: 10vh;
+}
+
+main {
+  overflow-y: scroll;
+  height: 80vh;
+}
+
 .App {
   text-align: center;
 }
 
 .footer {
-  height: 15vh;
+  height: 10vh;
 }
 
 .App-logo {
@@ -22,7 +31,6 @@ html, body {
 
 .main-container {
   display: flex;
-  
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -62,7 +70,7 @@ html, body {
 }
 
 .main-container, .home-container {
-  min-height: 100vh;
+  height: 80vh;
   margin: 0;
   background-image: linear-gradient(to right,
 	rgba(199.5, 220.5, 220.5, .10) 150px, rgba(199.5, 220.5, 220.5, .20) 100%);
