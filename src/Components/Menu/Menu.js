@@ -24,35 +24,39 @@ const Menu = ({ eventCards, setFilteredEvents }) => {
       )
     })
 
-    const collapseZones = () => {
+    const collapseZones = (e) => {
       var zones = Array.from(document.querySelectorAll(".menu-container .collapsible"))
       zones.forEach(zone => {
-        zone.classList.remove("active")
-        zone.nextElementSibling.style.display = "none"
+        if(e.target.id !== zone.id){
+          zone.classList.remove("active")
+          zone.nextElementSibling.style.display = "none"
+
+        }
       })
     }
 
     const toggleCollapsible = (e) => {
       e.target.classList.toggle("active");
-      collapseZones()
+      collapseZones(e)
       var content = e.target.nextElementSibling;
       if (content.style.display === "block") {
         content.style.display = "none";
       } else {
-        e.target.classList.add("active")
         content.style.display = "block";
       }
     }
 
     return (
       <span className="menu-container">
-        <button type="button" className="collapsible" onClick={(e) => toggleCollapsible(e)}>{zoneKey[1]}</button>
+        <button type="button" id={zoneKey[0]} className="collapsible" onClick={(e) => toggleCollapsible(e)}>{zoneKey[1]}</button>
         <div className="content">
           {keyZips}
         </div>
       </span>
     )
   })
+
+
   return (
     <div className="menu-main">
       <div className="pick-zip">

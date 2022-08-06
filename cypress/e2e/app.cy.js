@@ -24,7 +24,7 @@ describe("app", () => {
   it("Should be able to click a zipcode and see eventCard", () => {
     cy.get(".menu-container").contains("North West").click()
       .get(".content").contains("89129").click()
-      .get(".event-card").contains("h3", "Picnic in the park")
+      .get(".event-card").contains("h2", "Picnic in the park")
       .get(".event-card").contains("p", "Taking our 3yo to the park")
       .get(".toggle-button").click()
       .get(".modal").contains("h2", "Picnic in the park")
