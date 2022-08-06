@@ -17,7 +17,7 @@ describe("app", () => {
       .get(".toggle-button").click()
       .get(".rsvp-button").click()
       .get(".nav-links").contains("RSVP").click()
-      .get(".event-card").contains("h3", "Picnic in the park")
+      .get(".event-card").contains("h2", "Picnic in the park")
 
   })
 
