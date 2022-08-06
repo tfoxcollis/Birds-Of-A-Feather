@@ -1,9 +1,10 @@
 .main-event-container {
+  width: 100%;
   display: flex;
   flex-direction: row;
 }
 
-.mapquest-map {
+#eventMap {
   width: 600px;
   height: 400px;
 }
@@ -13,9 +14,73 @@
   flex-direction: column;
   justify-content: space-around;
   box-sizing: border-box;
-  height: 400px;
+  height: 80vh;
+  overflow-y: scroll;
+  width: 400px;
   border: 3px solid black;
   padding: 10px;
   background-color:rgb(210, 146, 239);
   opacity: .90;
+}
+
+.search-form {
+  position: relative;
+  height: 40vh;
+}
+
+.poi-results {
+  height: 20vh;
+  overflow-y: scroll;
+}
+
+.event-form-details {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+}
+
+.event-form-details .description {
+  height: 150px;
+}
+
+.event-submit {
+  width: 100px;
+}
+
+.poi {
+  display: flex;
+  align-items: center;
+}
+
+.poi button {
+  height: 20px;
+  margin-right: 10px;
+}
+
+@media screen and (min-width: 1000px) {
+  .map-container, .form-container {
+    margin-left: 50px;
+  }
+  .main-event-container {
+    align-items: center;
+  }
+}
+@media screen and (max-width: 1000px) {
+  #eventMap {
+    width: 400px;
+    height: 300px;
+  }
+  .map-container, .form-container {
+    margin-left: 50px;
+  }
+  .main-event-container {
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .main-event-container {
+    align-items: center;
+    flex-direction: column;
+  }
 }

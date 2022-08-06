@@ -7,6 +7,7 @@ import Events from "../Events/Events"
 import Menu from "../Menu/Menu"
 import Modal from '../Modal/Modal';
 import EventForm from '../EventForm/EventForm';
+import Footer from '../Footer/Footer';
 // import PropTypes from 'prop-types';
 
 import React, { useState } from 'react'
@@ -39,7 +40,7 @@ const App = () => {
 
   return (
     <div className="main">
-      <header>
+      <header className="main-header">
         <Route exact path="/home" >
           <Nav />
         </Route>
@@ -74,7 +75,17 @@ const App = () => {
 
       </main>
       <footer className="footer">
+        <Route exact path="/home" >
+          <Footer />
+        </Route>
         
+        <Route exact path="/Rsvp">
+          <Footer />
+        </Route>
+
+        <Route exact path="/eventform">
+          <Footer />
+        </Route>
       </footer>
     </div>
   )

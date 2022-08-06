@@ -3,12 +3,28 @@ html, body {
   overflow-x: hidden;
   font-family: 'Bubblegum Sans', cursive;
 }
+
+body {
+  background: url("../../assets/neon-flamingos.jpeg") repeat center;
+}
+
 #root {
   height: 100%;
+  background-image: linear-gradient(to right,
+	rgba(199.5, 220.5, 220.5, .10) 150px, rgba(199.5, 220.5, 220.5, .20) 100%);
+}
+
+main {
+  overflow-y: scroll;
+  height: 85vh;
 }
 
 .App {
   text-align: center;
+}
+
+.footer {
+  height: 10vh;
 }
 
 .App-logo {
@@ -18,7 +34,6 @@ html, body {
 
 .main-container {
   display: flex;
-  
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -52,13 +67,11 @@ html, body {
 }
 
 .main {
-  height: 100%;
-  background-image: url("../../assets/neon-flamingos.jpeg");
+  min-height: 100vh;
+  /* background-repeat: repeat-y; */
 }
 
-.main-container {
-  height: 100%;
+.main-container, .home-container {
+  height: 85vh;
   margin: 0;
-  background-image: linear-gradient(to right,
-	rgba(199.5, 220.5, 220.5, .20) 150px, rgba(199.5, 220.5, 220.5, .20) 100%);
 }
