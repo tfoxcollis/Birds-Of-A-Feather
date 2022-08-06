@@ -4,7 +4,7 @@
   flex-direction: row;
 }
 
-#map {
+#eventMap {
   width: 600px;
   height: 400px;
 }
@@ -14,12 +14,23 @@
   flex-direction: column;
   justify-content: space-around;
   box-sizing: border-box;
-  height: 600px;
+  height: 80vh;
+  overflow-y: scroll;
   width: 400px;
   border: 3px solid black;
   padding: 10px;
   background-color:rgb(210, 146, 239);
   opacity: .90;
+}
+
+.search-form {
+  position: relative;
+  height: 40vh;
+}
+
+.poi-results {
+  height: 20vh;
+  overflow-y: scroll;
 }
 
 .event-form-details {
@@ -51,8 +62,15 @@
   }
 }
 @media screen and (max-width: 1000px) {
-  #map {
+  #eventMap {
     width: 400px;
+    height: 300px;
+  }
+  .map-container, .form-container {
+    margin-left: 50px;
+  }
+  .main-event-container {
+    align-items: center;
   }
 }
 

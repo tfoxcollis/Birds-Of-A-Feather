@@ -9,12 +9,12 @@ const EventForm = ({eventCards,setEventCards}) => {
   useEffect(() => {
     if(!!selectedPoint) {
       window.L.mapquest.key = process.env.REACT_APP_MAPQUEST_KEY;
-      const container = window.L.DomUtil.get("map")
+      const container = window.L.DomUtil.get("eventMap")
       if(container != null) {
         container._leaflet_id = null;
       }
       const coordinates = selectedPoint.place.geometry.coordinates
-      var map = window.L.mapquest.map('map', {
+      var map = window.L.mapquest.map('eventMap', {
         center: [coordinates[1], coordinates[0]],
         layers: window.L.mapquest.tileLayer('map'),
         zoom: 14
@@ -81,55 +81,59 @@ const EventForm = ({eventCards,setEventCards}) => {
   return (
     <div className="main-event-container">
       <div className="form-container">
-        <div>
+        <div className="search-form">
           <form onSubmit={(e) => fetchPoi(e)}>
             <input type="search" id="place-search-input" placeholder="Start Searching..."/>
             <input type="submit" value="search"/>
           </form>
-          {pointsOfInt.length ? renderedPointsOfInt() : "Search for a location"}
+          {pointsOfInt?.length ? 
+            <div className="poi-results"> 
+              {renderedPointsOfInt()}
+            </div> : "Search for a location"}
         </div>
         <form className="event-form-details" onSubmit={(e) => handleSubmit(e)}>
           <table>
-            <tr>
-              <td>
-                <label for="date">Date:</label>
-              </td>
-              <td>
-                <input type="date" className="date" id="date"/>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <label for="time">Time:</label>
-              </td>
-              <td>
-                <input type="time" className="time" id="time"/>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <label for="event">Event:</label>
-              </td>
-              <td>
-                <input type="event" className="event" id="event" placeholder="ex: Hiking"/>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <label for="description">Description:</label>
-              </td>
-              <td>
-                <textarea type="text" className="description" id="description" placeholder="Who's going and what are you up to?" />
-              </td>
-            </tr>
+            <tbody>
+              <tr>
+                <td>
+                  <label htmlFor="date">Date:</label>
+                </td>
+                <td>
+                  <input type="date" className="date" id="date"/>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <label htmlFor="time">Time:</label>
+                </td>
+                <td>
+                  <input type="time" className="time" id="time"/>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <label htmlFor="event">Event:</label>
+                </td>
+                <td>
+                  <input type="event" className="event" id="event" placeholder="ex: Hiking"/>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <label htmlFor="description">Description:</label>
+                </td>
+                <td>
+                  <textarea type="text" className="description" id="description" placeholder="Who's going and what are you up to?" />
+                </td>
+              </tr>
+            </tbody>
           </table>
           <input type="submit" value="Create Event!"/>
         </form>
       </div>
       <div className="map-container">
-        <div id="map" className="mapquest-map"></div>
+        <div id="eventMap" className="mapquest-map"></div>
       </div>
-
     </div>
   )
 }
