@@ -6,11 +6,17 @@
 
 .logo {
   align-self: center;
-  padding-top: 10px;
+  margin-top: 20px;
+  height: 400px;
+  width: 400px;
+  border: 2px solid black;
+  border-radius: 7%;
 }
 
-.welcome-message {
+.message-container {
+  border: 2px solid black;
   display: flex;
+  border-radius: 8%;
   flex-direction: column;
   align-self: center;
   align-items: center;
@@ -25,6 +31,12 @@
   line-height: 25px;
   padding-bottom: 20px;
 }
+
+.welcome-message {
+  margin-left: 10px;
+}
+
+
 
 @import url('https://fonts.googleapis.com/css?family=Lato:400,700');
 
