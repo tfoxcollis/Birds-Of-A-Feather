@@ -10,7 +10,7 @@
 
 .menu-container {
   width: 100%;
-  background-color: #8a19ff;
+  background-color: #47817E;
 }
 
 h2, p {
@@ -27,7 +27,7 @@ h2 {
   padding-bottom: 10px;
   padding-top: 10px;
   justify-content: center;
-  background-color:rgb(210, 146, 239);
+  background-color: #5ABAB7;
   opacity: .90;
 }
 
@@ -40,7 +40,7 @@ h2 {
 }
 
 .collapsible {
-  background-color: #8a19ff;
+  background-color: #5ABAB7;
   cursor: pointer;
   padding: 18px;
   width: 100%;
@@ -61,7 +61,7 @@ h2 {
   padding: 0 18px;
   display: none;
   overflow: hidden;
-  background-color: #555;
+  background-color: #C0FCF9;
 }
 
 .zip-button {

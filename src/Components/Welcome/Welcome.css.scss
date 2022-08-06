@@ -42,10 +42,10 @@
 
 $white: #ececec;
 $black: #333333;
-$pink: rgb(213, 25, 213);
-$purple: #8a19ff;
+$pink: #D519D5;
+$teal: #5ABAB7;
 $colorPrimary: $pink;
-$colorSecondary: $purple;
+$colorSecondary: $teal;
 
 @mixin btn__split($colorLeft, $colorRight, $textColor) {
   .btn {

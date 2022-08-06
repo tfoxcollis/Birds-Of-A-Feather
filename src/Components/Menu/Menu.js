@@ -1,5 +1,6 @@
 import React from 'react'
 import './Menu.css'
+import './MenuZips.scss'
 import {zones, zoneKeys} from '../../data/mockData'
 
 const Menu = ({ eventCards, setFilteredEvents }) => {
@@ -13,7 +14,13 @@ const Menu = ({ eventCards, setFilteredEvents }) => {
   const renderedZones = zoneKeys.map(zoneKey => {
     const keyZips = zones[zoneKey[0]].map(zip => {
       return (
-        <button id={zip} className="zip-button" onClick={(e) => filterEvents(e)}>{zip}</button>
+        <div id={zip} className="zip-button" onClick={(e) => filterEvents(e)}>
+          <a href="#">
+              <p className="zip-p">{zip}</p>
+              <div className="hoverBtn"></div>
+              <div className="hoverBtn-bottom" id={zip} onClick={(e) => filterEvents(e)}></div>
+          </a>
+        </div>
       )
     })
 
