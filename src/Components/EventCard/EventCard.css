@@ -1,9 +1,33 @@
 .event-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  letter-spacing: .1rem;
+  text-align: center;
   box-sizing: border-box;
-  height: 400px;
+  height: 300px;
+  width: 250px;
   border: 3px solid black;
   padding: 10px;
   z-index: 0;
   background-color: #5ABAB7;
   opacity: .90;
+}
+
+.event-desc-title {
+  position: relative;
+  top: 10px;
+  background-color:#5ABAB7;
+}
+
+.event-description {
+  padding: 10px;
+  height: 160px;
+  border: 2px solid black;
+  margin-bottom: 10px;
+  overflow-y: scroll;
+}
+
+.event-date, .event-time {
+  font-size: 12px;
 }

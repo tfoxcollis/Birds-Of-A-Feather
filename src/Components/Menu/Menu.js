@@ -24,12 +24,22 @@ const Menu = ({ eventCards, setFilteredEvents }) => {
       )
     })
 
+    const collapseZones = () => {
+      var zones = Array.from(document.querySelectorAll(".menu-container .collapsible"))
+      zones.forEach(zone => {
+        zone.classList.remove("active")
+        zone.nextElementSibling.style.display = "none"
+      })
+    }
+
     const toggleCollapsible = (e) => {
       e.target.classList.toggle("active");
+      collapseZones()
       var content = e.target.nextElementSibling;
       if (content.style.display === "block") {
         content.style.display = "none";
       } else {
+        e.target.classList.add("active")
         content.style.display = "block";
       }
     }

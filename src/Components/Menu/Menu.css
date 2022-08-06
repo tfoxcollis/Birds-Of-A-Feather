@@ -1,11 +1,10 @@
 .menu-main{
   padding-top: 35px;
-
+  overflow-y: scroll;
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* border: 2px solid black; */
-  width: 15%;
+  width: 250px;
 }
 
 .menu-container {

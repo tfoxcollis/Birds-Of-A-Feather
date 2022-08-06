@@ -5,11 +5,10 @@
   
 }
 .modal {
-  position: relative;
+  position: fixed;
   top: 30%;
-  right: 50%;
-  transform: translateY(-50%);
-  z-index: 9999;
+  left: 30%;
+  width: 600px;
   background: white;
   border: 1px solid #ccc;
   transition: 1.1s ease-out;
@@ -76,4 +75,8 @@
 
 .mapquest-map {
   height: 400px;
+}
+
+@media screen and (min-width ) {
+
 }
