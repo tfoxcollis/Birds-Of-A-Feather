@@ -21,7 +21,7 @@ const Events = ({type, filteredEvents, toggleModal, messageByType}) => {
 
   return (
     <div className="events-container">
-      {renderedEvents.length ? renderedEvents : <p>{messageByType(type)}</p>}
+      {renderedEvents.length ? renderedEvents : <p className="no-events-message">{messageByType(type)}</p>}
     </div>
   )
 }
