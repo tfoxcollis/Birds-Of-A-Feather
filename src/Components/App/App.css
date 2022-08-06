@@ -61,7 +61,7 @@ html, body {
   /* background-repeat: repeat-y; */
 }
 
-.main-container {
+.main-container, .home-container {
   min-height: 100vh;
   margin: 0;
   background-image: linear-gradient(to right,

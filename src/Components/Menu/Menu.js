@@ -14,7 +14,7 @@ const Menu = ({ eventCards, setFilteredEvents }) => {
   const renderedZones = zoneKeys.map(zoneKey => {
     const keyZips = zones[zoneKey[0]].map(zip => {
       return (
-        <div id={zip} className="zip-button" onClick={(e) => filterEvents(e)}>
+        <div className="zip-button">
           <a href="#">
               <p className="zip-p">{zip}</p>
               <div className="hoverBtn"></div>

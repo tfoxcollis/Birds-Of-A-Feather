@@ -6,8 +6,6 @@
 }
 .modal {
   position: fixed;
-  top: 30%;
-  left: 30%;
   width: 600px;
   background: white;
   border: 1px solid #ccc;
@@ -73,10 +71,50 @@
   position: absolute;
 }
 
-.mapquest-map {
-  height: 400px;
+@media screen and (min-width: 410px ) {
+  .modal {
+    top: 30%;
+    left: 10%;
+    width: 100%;
+    margin: 0;
+  }
+
+  #map {
+    width: 100%;
+  }
 }
 
-@media screen and (min-width ) {
+@media screen and (max-width: 410px ) {
+  .modal {
+    top: 30%;
+    right: 12%;
+    width: 100%;
+    margin: 0;
+  }
 
+  #map {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 600px ) {
+  .modal {
+    top: 30%;
+    left: 10%;
+    width: 600px;
+  }
+
+  #map {
+    width: 600px;
+  }
+}
+
+@media screen and (min-width: 800px ) {
+  .modal {
+    top: 30%;
+    left: 30%;
+  }
+  #map {
+    width: 600px;
+  }
 }

@@ -65,6 +65,32 @@ export const eventsData = [
     event: "Picnic in the park"
   },
   {
+    id: 5,
+    userId: 3,
+    location: {
+      lat: 36.23157,
+      lng: -115.314194,
+      zip: 89129
+    },
+    date: "2022/08/21",
+    time: "12:00",
+    description: "Taking our 3yo to the park.",
+    event: "Picnic in the park"
+  },
+  {
+    id: 5,
+    userId: 3,
+    location: {
+      lat: 36.23157,
+      lng: -115.314194,
+      zip: 89129
+    },
+    date: "2022/08/21",
+    time: "12:00",
+    description: "Taking our 3yo to the park.",
+    event: "Picnic in the park"
+  },
+  {
     id: 6,
     userId: 3,
     location: {
