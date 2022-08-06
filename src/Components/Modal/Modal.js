@@ -27,6 +27,17 @@ const Modal = ({showModal, modalEvent, toggleModal, setRsvp, rsvp}) => {
     }
   })
 
+  const findRsvp = () => {
+    return rsvp.find(singleRsvp => singleRsvp.eventId === modalEvent.id )
+  }
+
+  const cancelRsvp = (e) => {
+    e.preventDefault(e)
+    const findSingleRsvp = findRsvp()
+    const filteredRsvps = rsvp.filter(rsvpObj => rsvpObj !== findSingleRsvp)
+    setRsvp(filteredRsvps)
+  }
+
   const addRsvp = (e) => {
     e.preventDefault(e)
     const newRsvp = {
@@ -46,7 +57,10 @@ const Modal = ({showModal, modalEvent, toggleModal, setRsvp, rsvp}) => {
             <div id="map" className="mapquest-map"></div>
             <div className="actions">
               <button className="close-modal" onClick={(e) => toggleModal(e)}>Close</button>
-              <button className="rsvp-button" onClick={(e) => addRsvp(e)}>RSVP</button>
+              {!!findRsvp() ?
+              <button className="cancel-rsvp-button" onClick={(e) =>cancelRsvp(e)}>Cancel RSVP</button>
+              :
+              <button className="rsvp-button" onClick={(e) => addRsvp(e)}>RSVP</button> }
             </div>
           </> :
           null
