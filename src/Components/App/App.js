@@ -40,7 +40,7 @@ const App = () => {
 
   return (
     <div className="main">
-      <header>
+      <header className="main-header">
         <Route exact path="/home" >
           <Nav />
         </Route>
@@ -75,7 +75,17 @@ const App = () => {
 
       </main>
       <footer className="footer">
-        <Footer />
+        <Route exact path="/home" >
+          <Footer />
+        </Route>
+        
+        <Route exact path="/Rsvp">
+          <Footer />
+        </Route>
+
+        <Route exact path="/eventform">
+          <Footer />
+        </Route>
       </footer>
     </div>
   )
