@@ -126,9 +126,14 @@ const EventForm = ({eventCards,setEventCards}) => {
                   <textarea type="text" className="description" id="description" placeholder="Who's going and what are you up to?" />
                 </td>
               </tr>
+              <tr>
+                <td></td>
+                <td>
+                  <input type="submit" className="event-submit" value="Create Event!"/>
+                </td>
+              </tr>
             </tbody>
           </table>
-          <input type="submit" value="Create Event!"/>
         </form>
       </div>
       <div className="map-container">

@@ -43,6 +43,10 @@
   height: 150px;
 }
 
+.event-submit {
+  width: 100px;
+}
+
 .poi {
   display: flex;
   align-items: center;

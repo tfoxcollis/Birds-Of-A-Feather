@@ -1,4 +1,4 @@
-import "./Events.css"
+import "./Events.css.scss"
 import EventCard from "../EventCard/EventCard"
 import React from 'react'
 
@@ -21,7 +21,11 @@ const Events = ({type, filteredEvents, toggleModal, messageByType}) => {
 
   return (
     <div className="events-container">
-      {renderedEvents.length ? renderedEvents : <p className="no-events-message">{messageByType(type)}</p>}
+      {renderedEvents.length ? renderedEvents :
+        <div className="no-events-message">
+          <p>{messageByType(type)}</p>
+        </div>
+      }
     </div>
   )
 }

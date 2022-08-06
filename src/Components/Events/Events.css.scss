@@ -5,6 +5,21 @@
   grid-gap: 20px;
 }
 
+.no-events-message {
+  width: 300px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  background-color:rgb(210, 146, 239);
+  opacity: .80;
+  border: 2px solid black;
+  p {
+    text-align: center;
+  }
+}
+
 @media screen and (max-width: 900px ) {
   .events-container {
     grid-template-columns: repeat(1, 1fr);
