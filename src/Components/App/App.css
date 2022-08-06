@@ -11,6 +11,10 @@ html, body {
   text-align: center;
 }
 
+.footer {
+  height: 15vh;
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;

@@ -7,6 +7,7 @@ import Events from "../Events/Events"
 import Menu from "../Menu/Menu"
 import Modal from '../Modal/Modal';
 import EventForm from '../EventForm/EventForm';
+import Footer from '../Footer/Footer';
 // import PropTypes from 'prop-types';
 
 import React, { useState } from 'react'
@@ -74,7 +75,7 @@ const App = () => {
 
       </main>
       <footer className="footer">
-        
+        <Footer />
       </footer>
     </div>
   )
