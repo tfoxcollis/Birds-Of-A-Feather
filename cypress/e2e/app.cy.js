@@ -28,7 +28,7 @@ describe("app", () => {
       .get(".event-card").contains("p", "Taking our 3yo to the park")
       .get(".toggle-button").click()
       .get(".modal").contains("h2", "Picnic in the park")
-      .get(".close-modal").click({force: true})
+      .get(".close-modal").click()
       .get(".modal").should("not.be.visible")
   })
 
