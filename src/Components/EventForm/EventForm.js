@@ -84,7 +84,7 @@ const EventForm = ({eventCards,setEventCards}) => {
         <div className="search-form">
           <form onSubmit={(e) => fetchPoi(e)}>
             <input type="search" id="place-search-input" placeholder="Start Searching..."/>
-            <input type="submit" value="search"/>
+            <input id="searchSubmit" type="submit" value="search"/>
           </form>
           {pointsOfInt?.length ? 
             <div className="poi-results"> 

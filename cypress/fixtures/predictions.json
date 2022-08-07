@@ -1,0 +1,81 @@
+{
+  "request": {
+      "q": "exploration peak park",
+      "limit": 5,
+      "location": {
+          "long": -115.140597,
+          "lat": 36.169202
+      },
+      "feedback": false,
+      "collection": [
+          "category",
+          "airport",
+          "address",
+          "franchise",
+          "poi",
+          "adminArea"
+      ]
+  },
+  "results": [
+      {
+          "id": "mqId:441968848",
+          "displayString": "Exploration Peak Park, 9275 S Buffalo Dr, Las Vegas, NV",
+          "name": "Exploration Peak Park",
+          "recordType": "poi",
+          "collection": [
+              "poi"
+          ],
+          "mqId": 441968848,
+          "slug": "/us/nevada/exploration-peak-park-441968848",
+          "language": "en",
+          "place": {
+              "type": "Feature",
+              "geometry": {
+                  "coordinates": [
+                      -115.26244,
+                      36.019606
+                  ],
+                  "type": "Point"
+              },
+              "properties": {
+                  "city": "Las Vegas",
+                  "stateCode": "NV",
+                  "postalCode": "89178",
+                  "countryCode": "US",
+                  "street": "9275 S Buffalo Dr",
+                  "type": "address"
+              }
+          }
+      },
+      {
+          "id": "mqId:470679837",
+          "displayString": "Exploration Peak Park, 9700 S Buffalo Dr, Las Vegas, NV",
+          "name": "Exploration Peak Park",
+          "recordType": "poi",
+          "collection": [
+              "poi"
+          ],
+          "mqId": 470679837,
+          "slug": "/us/nevada/exploration-peak-park-470679837",
+          "language": "en",
+          "place": {
+              "type": "Feature",
+              "geometry": {
+                  "coordinates": [
+                      -115.261582,
+                      36.012105
+                  ],
+                  "type": "Point"
+              },
+              "properties": {
+                  "city": "Las Vegas",
+                  "stateCode": "NV",
+                  "postalCode": "89178",
+                  "countryCode": "US",
+                  "street": "9700 S Buffalo Dr",
+                  "type": "address"
+              }
+          }
+      }
+  ]
+}
