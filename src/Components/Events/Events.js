@@ -31,24 +31,10 @@ const Events = ({type, filteredEvents, toggleModal, messageByType}) => {
 
 export default Events
 
-const event = PropTypes.shape({
-  id: PropTypes.number,
-  userId: PropTypes.number,
-  location: PropTypes.objectOf({
-    lat: PropTypes.number,
-    lng: PropTypes.number,
-    zip: PropTypes.number
-  }),
-  date: PropTypes.string,
-  time: PropTypes.string,
-  description: PropTypes.string,
-  event: PropTypes.string
-})
-
 Events.propTypes = {
   type: PropTypes.string,
   messageByType: PropTypes.func,
-  filteredEvents: PropTypes.arrayOf(PropTypes.objectOf(event)),
+  filteredEvents: PropTypes.arrayOf(PropTypes.object),
   toggleModal: PropTypes.func
 
 }
