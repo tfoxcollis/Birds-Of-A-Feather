@@ -1,6 +1,7 @@
 import "./Events.css.scss"
 import EventCard from "../EventCard/EventCard"
 import React from 'react'
+import PropTypes from 'prop-types';
 
 const Events = ({type, filteredEvents, toggleModal, messageByType}) => {
   const renderedEvents = filteredEvents.map((event) => {
@@ -8,8 +9,6 @@ const Events = ({type, filteredEvents, toggleModal, messageByType}) => {
       <EventCard
         id={event.id}
         key={event.id}
-        userId={event.userId}
-        location={event.location}
         description={event.description}
         event={event.event}
         date={event.date}
@@ -31,3 +30,11 @@ const Events = ({type, filteredEvents, toggleModal, messageByType}) => {
 }
 
 export default Events
+
+Events.propTypes = {
+  type: PropTypes.string,
+  messageByType: PropTypes.func,
+  filteredEvents: PropTypes.arrayOf(PropTypes.object),
+  toggleModal: PropTypes.func
+
+}

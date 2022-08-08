@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import "./EventForm.css"
+import PropTypes from 'prop-types';
+import { fetchPredictions } from '../../ApiCalls'
 
 
 const EventForm = ({eventCards,setEventCards}) => {
@@ -32,9 +34,7 @@ const EventForm = ({eventCards,setEventCards}) => {
 
   const fetchPoi = (e) => {
     e.preventDefault(e)
-    const url = `https://www.mapquestapi.com/search/v3/prediction?key=${process.env.REACT_APP_MAPQUEST_KEY}&q=${e.target["place-search-input"].value}&collection=address,adminArea,airport,category,franchise,poi&limit=5&location=-115.140597,36.169202`
-    fetch(url)
-      .then(response => response.json())
+    fetchPredictions(e)
       .then(data => {
         setPointsOfInt(data.results)
       })
@@ -144,3 +144,8 @@ const EventForm = ({eventCards,setEventCards}) => {
 }
 
 export default EventForm
+
+EventForm.propTypes = {
+  eventCards: PropTypes.arrayOf(PropTypes.object),
+  setEventCards: PropTypes.func
+}

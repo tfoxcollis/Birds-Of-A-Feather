@@ -1,8 +1,8 @@
-import React, { useEffect } from 'react'
+import React, { useEffect } from "react"
+import PropTypes from 'prop-types';
 import "./Modal.css.scss"
 
-
-const Modal = ({showModal, modalEvent, toggleModal, setRsvp, rsvp}) => {
+const Modal = ({ modalEvent, toggleModal, setRsvp, rsvp}) => {
 
   useEffect(() => {
     if(!!modalEvent) {
@@ -72,3 +72,24 @@ const Modal = ({showModal, modalEvent, toggleModal, setRsvp, rsvp}) => {
 }
 
 export default Modal
+
+const event = PropTypes.shape({
+  id: PropTypes.number,
+  userId: PropTypes.number,
+  location: PropTypes.objectOf({
+    lat: PropTypes.number,
+    lng: PropTypes.number,
+    zip: PropTypes.number
+  }),
+  date: PropTypes.string,
+  time: PropTypes.string,
+  description: PropTypes.string,
+  event: PropTypes.string
+})
+
+Modal.propTypes = {
+  modalEvent: PropTypes.objectOf(event),
+  toggleModal: PropTypes.func,
+  setRsvp: PropTypes.func,
+  rsvp: PropTypes.arrayOf(PropTypes.objectOf(event))
+}

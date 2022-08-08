@@ -1,6 +1,7 @@
-import React, { useState } from 'react'
+import React from 'react'
 import Events from '../Events/Events'
 import "./Rsvp.css"
+import PropTypes from 'prop-types';
 
 
 
@@ -26,3 +27,10 @@ const Rsvp = ({messageByType, rsvp, eventCards, toggleModal}) => {
 }
 
 export default Rsvp
+
+Rsvp.propTypes = {
+  messageByType: PropTypes.func,
+  rsvp: PropTypes.arrayOf(PropTypes.object),
+  eventCards: PropTypes.arrayOf(PropTypes.object),
+  toggleModal: PropTypes.func
+}
