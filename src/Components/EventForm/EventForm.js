@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import "./EventForm.css"
+import PropTypes from 'prop-types';
 
 
 const EventForm = ({eventCards,setEventCards}) => {
@@ -144,3 +145,8 @@ const EventForm = ({eventCards,setEventCards}) => {
 }
 
 export default EventForm
+
+EventForm.propTypes = {
+  eventCards: PropTypes.arrayOf(PropTypes.object),
+  setEventCards: PropTypes.func
+}

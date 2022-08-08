@@ -2,6 +2,7 @@ import React from 'react'
 import './Menu.css'
 import './MenuZips.scss'
 import {zones, zoneKeys} from '../../data/mockData'
+import PropTypes from 'prop-types';
 
 const Menu = ({ eventCards, setFilteredEvents }) => {
   const filterEvents = (e) => {
@@ -68,3 +69,8 @@ const Menu = ({ eventCards, setFilteredEvents }) => {
 }
 
 export default Menu
+
+Menu.propTypes = {
+  eventCards: PropTypes.arrayOf(PropTypes.object),
+  setFilteredEvents: PropTypes.func
+}

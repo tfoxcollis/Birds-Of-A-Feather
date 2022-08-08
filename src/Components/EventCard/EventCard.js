@@ -1,6 +1,6 @@
 import "./EventCard.css"
-import React, { useState } from 'react'
-import Modal from "../Modal/Modal"
+import React from 'react'
+import PropTypes from 'prop-types';
 
 const EventCard = ({id, userId, location, description, event, date, time, toggleModal }) => {
   return (
@@ -18,3 +18,20 @@ const EventCard = ({id, userId, location, description, event, date, time, toggle
 }
 
 export default EventCard
+
+
+const location = PropTypes.shape({
+  lat: PropTypes.number,
+  lng: PropTypes.number,
+  zip: PropTypes.number
+})
+EventCard.propTypes = {
+  id: PropTypes.number,
+  userId: PropTypes.number,
+  location: PropTypes.objectOf(location),  
+  description: PropTypes.string,
+  event: PropTypes.string,
+  date: PropTypes.string,
+  time: PropTypes.string,
+  toggleModal: PropTypes.func
+}
