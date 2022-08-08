@@ -1,70 +1,68 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Birds of a Feather - LV
 
-## Available Scripts
+## Overview:
 
-In the project directory, you can run:
+Birds of a Feather is a project that is near and dear to my heart.  It's an app geared towards LGBTQ+ families in the Las Vegas area looking to connect and set up play dates with their kids.  The user has the ability to view events by zip code, RSVP to events, and add their own events.
 
-### `npm start`
+## Example of Project:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+[Deployed Link](https://birds-of-a-feather-lv.herokuapp.com/)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+![Demo of Project](./src/assets/BirdsOfAFeather1.gif)
+![Demo of Project](./src/assets/BirdsofaFeather2.gif)
 
-### `npm test`
+## Tech used:
+* React
+* React Router
+* React PropTypes
+* JavaScript
+* HTML
+* CSS
+* Cypress Testing
+* Postman
+* npm
+* Webpack
+* GitHub Issues
+* GitHub Projects
+* Heroku
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+## Challenges:
+- Using the Mapquest API was a bit of a stretch for me and I had to really dig into it to understand it
+- Thinking of sad paths for testing
+- Utilizing a modal had a bit of a learning curve as well
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Wins:
+- Getting the Map to pinpoint spots in the Las Vegas area was difficult but so fun!
+- The Modal and Maps 
+- Getting the buttons to be a bit more interactive
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Future Additions:
+- Backend build out to allow users to sign in
+- Stronger relationship between objects in a database
+- A "My Events" page so the user can see the events they created
+- Messaging feature for communication between the users
 
-### `npm run eject`
+## Setup
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+The details of this project are outlined in [this project spec](https://frontend.turing.edu/projects/module-3/showcase.html).
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### note: you will need to request a mapquest API key and set it equal to REACT_APP_MAPQUEST_KEY
+1. Fork this Repo
+2. Clone it down to your machine
+3. `cd` into the root of the project directory
+4. Run `npm install`
+5. Run `npm start`
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+For Cypress Testing:
+1. Run `npm run cypress`
+2. Follow the prompts in the browser and select the spec file you want to run
 
-## Learn More
+## Contributors:
+- [Trish Fox-Collis](https://github.com/tfoxcollis)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Contributor LinkedIn Profile
+- [Trish Fox-Collis](https://www.linkedin.com/in/trish-fox-collis/)
