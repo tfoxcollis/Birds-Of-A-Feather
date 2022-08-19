@@ -13,7 +13,8 @@ const Welcome = () => {
             Our goal is to connect LGBTQ+ families in the Las Vegas area.
             After you enter, select a zip code and see if any other families have set up events near you. 
             See an event you want to attend, hit that RSVP button and let the fam know you'll be there! 
-            Because Birds of A Feather Flock Together
+            Dont see an event near you?  Create one on the Create Event Page!<br></br>
+            Birds of A Feather Flock Together!
           </p><br></br>
           
           <div className="btn-container">

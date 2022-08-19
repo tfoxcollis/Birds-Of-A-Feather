@@ -31,7 +31,7 @@ const App = () => {
     if(type === "home"){
       return "Uh Oh! There are no events happening in this area. Please try another zip code!"
     }else if(type === "Rsvp"){ 
-      return "You have not RSVP'd to any events! Go check some out!"
+      return "You have not RSVP'd to any events- Go check some out! Or create your own!"
     }
   }
 

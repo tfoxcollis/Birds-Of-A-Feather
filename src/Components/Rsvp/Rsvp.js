@@ -19,7 +19,6 @@ const Rsvp = ({messageByType, rsvp, eventCards, toggleModal}) => {
   
   return (
     <div>
-      <h2>Your RSVP Page</h2>
       <Events type="Rsvp" messageByType={messageByType} filteredEvents={filterEvents} toggleModal={toggleModal} />
 
     </div>
