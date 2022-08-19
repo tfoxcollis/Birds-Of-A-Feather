@@ -1,0 +1,11 @@
+language: node_js
+node_js:
+- node
+notifications:
+  email: false
+deploy:
+  provider: heroku
+  api_key:
+    secure: VEVa8lPWiKbRkITCdXQvfVaDSC9GUnltIvi7vv9z3SPt41GITalv43XybigJPqx2baNJ8DTBZZfpuJefptOP2tWw3MAS94PA32u70SjaIDexPzLuRIRnWZt4xINUMLPuL64tPeHCwW7QUoZwl+DOma9yK3RqFD8fLEymaJixUlXcluL9sNI7MVDbVorxRE/YHoBioB3CpNtQXepFbZIaX5yjRuvYk78zKOoOuo9qc9Oum1HXBLJTs70wKUa/dG/O9PsYKKIe23Y95zvG9YdmYIvRclot+VOuBP48HjrGCOZI57EmI3iruuBD16CTKnoH/yuDD4bdcxFKwciwnXvuz2pni8RMuB6vFacdLE/jlbVfuNepTJQMSQpYskd/QnTwMsYB1pnC1yX9fu0q3EVnbUm1yAHURHJKhoxQ7XDcb0GbzBxqDuo+CXYBSC4B9pW3SM/on2ty4m37EdoRx0q1WqXeO4KdERTo5+0fddSumU5hSfmQJoMvSH9P+FiBm7ZokON3P++Whd6MBwhqwD+0geJdhsUHbeHzaImSzx7U7eoJbb7RWUQiw4RFnYi1fZbsAjWDcvYBqO+dNqVjT35x1LyoIcZSmHDzV0CUXgbEKofMf+ajWkYGSE70/cb9nmkAbkZT9r4juHQFrHjQ4EIj0k8PF5Hhm3lpCv5haDCrAtY=
+  app: birds-of-a-feather-lv
+  skip_cleanup: true
