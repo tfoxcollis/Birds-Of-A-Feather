@@ -1,4 +1,4 @@
-[![Build Status](https://api.travis-ci.com/tfoxcollis/Birds-Of-A-Feather.png)](https://travis-ci.com/github/tfoxcollis/Birds-Of-A-Feather)
+[![Travis CI Build Status](https://api.travis-ci.com/tfoxcollis/Birds-Of-A-Feather.png)](https://travis-ci.com/github/tfoxcollis/Birds-Of-A-Feather)
 # Birds of a Feather - LV
 
 ## Overview:
@@ -20,6 +20,7 @@ Birds of a Feather is a project that is near and dear to my heart.  It's an app 
 * HTML
 * CSS
 * Cypress Testing
+* Travis CI
 * Postman
 * npm
 * Webpack
