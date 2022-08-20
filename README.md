@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.com/tfoxcollis/Birds-Of-A-Feather.png)](https://travis-ci.com/tfoxcollis/Birds-Of-A-Feather)
+[![Build Status](https://api.travis-ci.com/tfoxcollis/Birds-Of-A-Feather.png)](https://travis-ci.com/github/tfoxcollis/Birds-Of-A-Feather)
 # Birds of a Feather - LV
 
 ## Overview:
