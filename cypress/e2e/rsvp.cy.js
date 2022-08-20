@@ -7,7 +7,7 @@ describe("app", () => {
   })
 
   it("should have a message on load that says the user has no RSVPs", () => {
-    cy.get(".no-events-message").contains("You have not RSVP'd to any events! Go check some out!")
+    cy.get(".no-events-message").contains("You have not RSVP'd to any events- Go check some out! Or create your own!")
   })
 
   it("should be able to click home and select event and rsvp to it and have it show on the RSVP page", () => {
@@ -31,6 +31,6 @@ describe("app", () => {
       .get(".event-card").contains("View Event").click()
       .get(".cancel-rsvp-button").should("be.visible").click()
       .get(".close-modal").click()
-      .get(".no-events-message").contains("You have not RSVP'd to any events! Go check some out!")
+      .get(".no-events-message").contains("You have not RSVP'd to any events- Go check some out! Or create your own!")
   })
 })

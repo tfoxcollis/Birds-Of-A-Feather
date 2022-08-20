@@ -14,7 +14,7 @@ script:
   # start server in the background
   - npm run start &
   # run all Cypress tests and record on the dashboard
-  - npm run cy:run -- --record
+  - npm run cy:run -- --record c9f451b2-87d9-47d4-a773-65771e84423c
   # after all tests finish running we need
   # to kill all background jobs (like "npm start &")
   # this avoids flake in Travis jobs
